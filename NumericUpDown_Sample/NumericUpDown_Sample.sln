@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericUpDown_Sample", "NumericUpDown_Sample.csproj", "{B13B44BC-6FFD-45DC-BB18-7565E1B5E623}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B13B44BC-6FFD-45DC-BB18-7565E1B5E623}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{B13B44BC-6FFD-45DC-BB18-7565E1B5E623}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{B13B44BC-6FFD-45DC-BB18-7565E1B5E623}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{B13B44BC-6FFD-45DC-BB18-7565E1B5E623}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{B13B44BC-6FFD-45DC-BB18-7565E1B5E623}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{B13B44BC-6FFD-45DC-BB18-7565E1B5E623}.Debug|iPhone.Build.0 = Debug|iPhone
+		{B13B44BC-6FFD-45DC-BB18-7565E1B5E623}.Release|iPhone.ActiveCfg = Release|iPhone
+		{B13B44BC-6FFD-45DC-BB18-7565E1B5E623}.Release|iPhone.Build.0 = Release|iPhone
+	EndGlobalSection
+EndGlobal
