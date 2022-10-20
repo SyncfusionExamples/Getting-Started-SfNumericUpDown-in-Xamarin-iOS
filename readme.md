@@ -1,47 +1,49 @@
-# Getting started of SfNumericUpDown in Xamarin.iOS
+# Getting Started SfNumericUpDown in Xamarin iOS
 
-This section provides overview for working with Essential NumericUpDown for Xamarin.iOS. You can walk through the entire process of creating a SfNumericUpDown.
+This repository contains sample to get started with the [Syncfusion Xamarin.iOS Numeric UpDown](https://help.syncfusion.com/xamarin-ios/sfnumericupdown/getting-started) control. The NumericUpDown is an editor control which provides up and down repeat buttons to increment and decrement the values. The control respects the UI culture and can be configured to display different formats like currency format, scientific format, etc.
 
-Referencing Essential Studio Components in Your Solution
-After installing Essential Studio for Xamarin, you can find all the required assemblies in the installation folders, typically:
+## Syncfusion controls
 
-{Syncfusion Installed location}\Essential Studio{version number}\lib
+This project used the following Syncfusion control(s):
+* [SfNumericUpDown](https://www.syncfusion.com/xamarin-ios-ui-controls/numericupdown)
 
-**NOTE**
+## Requirements to run the sample
 
-Assemblies are available in unzipped package location in Mac
+* [Visual Studio](https://visualstudio.microsoft.com/downloads/) or [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/)
 
-and below assembly reference to the iOS unified project.
+Refer to the following link for more details - [System Requirements](https://help.syncfusion.com/xamarin-ios/system-requirements)
 
-iOS-unifed\Syncfusion.SfNumericUpDown.iOS.dll
+## How to run the sample
 
-## Add SfNumericUpDown
-The SfNumericUpDown control configured entirely in C# code. The following steps explain on how to create a SfNumericUpDown and configure its elements,
+1. Clone the sample and open it in Visual Studio.
 
-Adding namespace for the added assemblies.
-```
-using Syncfusion.SfNumericUpDown.iOS;
-```
-Now add the SfNumericUpDown control with a required optimal name by using the included namespace.
+   *Note: If you download the sample using the "Download ZIP" option, right-click it, select Properties, and then select Unblock.*
+   
+2. Register your license key in the FinishedLaunching override method of AppDelegate.cs file as demonstrated in the following code.
 
-[C#]
+		public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
+		{
+			//Register Syncfusion license
+			Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
 
-```
-SfNumericUpDown numeric = new SfNumericUpDown()
-{
+			// create a new window instance based on the screen size
+			Window = new UIWindow(UIScreen.MainScreen.Bounds);
+
+			// If you have defined a root view controller, set it here:
+			// Window.RootViewController = myViewController;
+
+			// make the window visible
+			Window.MakeKeyAndVisible();
+
+			return true;
+		}
+		
+	Refer to this [link](https://help.syncfusion.com/xamarin-ios/licensing/overview) for more details.
 	
-	Frame = new CGRect(10, 50, 350, 40),
-};
+3. Clean and build the application.
 
-this.Add(numeric);
-```
+4. Run the application.
 
-## Set Value
-The SfNumericUpDown control display value can be set using Value property.
+## License
 
-
-[C#]
-
-```
-numeric.Value = 100;
-```
+Syncfusion has no liability for any damage or consequence that may arise by using or viewing the samples. The samples are for demonstrative purposes, and if you choose to use or access the samples, you agree to not hold Syncfusion liable, in any form, for any damage that is related to use, for accessing, or viewing the samples. By accessing, viewing, or seeing the samples, you acknowledge and agree Syncfusion’s samples will not allow you seek injunctive relief in any form for any claim related to the sample. If you do not agree to this, do not view, access, utilize, or otherwise do anything with Syncfusion’s samples.
