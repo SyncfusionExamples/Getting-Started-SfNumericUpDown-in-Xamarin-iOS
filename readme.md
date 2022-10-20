@@ -1,6 +1,6 @@
 # Getting Started SfNumericUpDown in Xamarin iOS
 
-This repository contains sample for how to get started with the [Syncfusion Xamarin.iOS Numeric UpDown](https://help.syncfusion.com/xamarin-ios/sfnumericupdown/getting-started) control. The NumericUpDown is an editor control which provides up and down repeat buttons to increment and decrement the values. The control respects the UI culture and can be configured to display different formats like currency format, scientific format, etc.
+This repository contains sample to get started with the [Syncfusion Xamarin.iOS Numeric UpDown](https://help.syncfusion.com/xamarin-ios/sfnumericupdown/getting-started) control. The NumericUpDown is an editor control which provides up and down repeat buttons to increment and decrement the values. The control respects the UI culture and can be configured to display different formats like currency format, scientific format, etc.
 
 ## Syncfusion controls
 
