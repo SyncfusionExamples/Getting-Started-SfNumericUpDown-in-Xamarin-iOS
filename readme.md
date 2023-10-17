@@ -1,48 +1,87 @@
-# Getting Started SfNumericUpDown in Xamarin iOS
+# Getting Started with Xamarin NumericUpDown (SfNumericUpDown
 
-This repository contains sample to get started with the [Syncfusion Xamarin.iOS Numeric UpDown](https://help.syncfusion.com/xamarin-ios/sfnumericupdown/getting-started) control. The NumericUpDown is an editor control which provides up and down repeat buttons to increment and decrement the values. The control respects the UI culture and can be configured to display different formats like currency format, scientific format, etc.
+This section provides overview for working with Essential SfNumericUpDown for Xamarin.Forms. You can walk through the entire process of creating a SfNumericUpDown.
 
-## Syncfusion controls
+# Assembly deployment
+After installing Essential Studio for Xamarin, you can find all the required assemblies in the installation folders, {Syncfusion Essential Studio Installed location} \Essential Studio\{Version #}\Xamarin\lib.
 
-This project used the following Syncfusion control(s):
-* [SfNumericUpDown](https://www.syncfusion.com/xamarin-ios-ui-controls/numericupdown)
+# Adding SfNumericUpDown reference
+You can add SfNumericUpDown reference using one of the following methods:
 
-## Requirements to run the sample
+## Method 1: Adding SfNumericUpDown reference from nuget.org
 
-* [Visual Studio](https://visualstudio.microsoft.com/downloads/) or [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/)
+Syncfusion Xamarin components are available in nuget.org. To add SfNumericUpDown to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Xamarin.SfNumericUpDown, and then install it.
 
-Refer to the following link for more details - [System Requirements](https://help.syncfusion.com/xamarin-ios/system-requirements)
+## Method 2: Adding SfNumericUpDown reference from toolbox
 
-## How to run the sample
+Syncfusion also provides Xamarin Toolbox. Using this toolbox, you can drag the SfNumericUpDown control to the XAML page. It will automatically install the required NuGet packages and add the namespace to the page. To install Syncfusion Xamarin Toolbox, refer to Toolbox.
 
-1. Clone the sample and open it in Visual Studio.
+## Method 3: Adding SfNumericUpDown assemblies manually from the installed location
 
-   *Note: If you download the sample using the "Download ZIP" option, right-click it, select Properties, and then select Unblock.*
+If you prefer to manually reference the assemblies instead referencing from NuGet, add the following assemblies in respective projects.
+
+# iOS
+To launch SfNumericUpDown in iOS, need to create an instance of SfNumericUpDownRenderer in FinishedLaunching overridden method of AppDelegate class in iOS Project as shown below.
+
+**[C#]**
+```
+public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+{
+	global::Xamarin.Forms.Forms.Init();
+
+	SfNumericUpDownRenderer.Init();
+
+	LoadApplication(new App());
+
+	return base.FinishedLaunching(app, options);
    
-2. Register your license key in the FinishedLaunching override method of AppDelegate.cs file as demonstrated in the following code.
+}
+```
+# Create a Simple SfNumericUpDown
+The SfNumericUpDown control can be configured entirely in C# code or by using the XAML markup. The following steps explain how to create a SfNumericUpDown and configure its elements.
 
-		public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
-		{
-			//Register Syncfusion license
-			Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+*	Adding namespace for the added assemblies.
 
-			// create a new window instance based on the screen size
-			Window = new UIWindow(UIScreen.MainScreen.Bounds);
+**[XAML]**
+```
+<xmlns:numeric="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms"/>
+```
+**[C#]**
+```
+using Syncfusion.SfNumericUpDown.XForms;
+```
+*	Now add the SfNumericUpDown control with a required optimal name by using the included namespace.
 
-			// If you have defined a root view controller, set it here:
-			// Window.RootViewController = myViewController;
+**[XAML]**
+```
+<numeric:SfNumericUpDown/>
+```
+**[C#]**
 
-			// make the window visible
-			Window.MakeKeyAndVisible();
+```
+SfNumericUpDown numericUpDown=new SfNumericUpDown();
+this.Content = numericUpDown;
+```
+# Set value in SfNumericUpDown
+The SfNumericUpDown control display value can be set using the Value property.
 
-			return true;
-		}
-		
-	Refer to this [link](https://help.syncfusion.com/xamarin-ios/licensing/overview) for more details.
-	
-3. Clean and build the application.
+**[XAML]**
+```
+<numeric:SfNumericUpDown Value="5"/>
+```
+**[C#]**
+```
+SfNumericUpDown numericUpDown=new SfNumericUpDown();
+numericUpDown.Value= 5;
+this.Content = numericUpDown;
+```
+## How to run this application?
 
-4. Run the application.
+To run this application, you need to first clone the Getting-Started-SfNumericUpDown-in-Xamarin-iOS repository and then open it in Visual Studio 2022. Now, simply build and run your project to view the output.
+
+## <a name="troubleshooting"></a>Troubleshooting ##
+### Path too long exception
+If you are facing path too long exception when building this example project, close Visual Studio and rename the repository to short and build the project.
 
 ## License
 
